@@ -1,0 +1,41 @@
+.portfolio {
+    &__filtr {
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 8px;
+        }
+
+        &__btn {
+            color: $color-primary;
+            font-size: $font-size-16;
+            line-height: $line-height-26;
+            font-weight: $font-weight-light;
+            letter-spacing: $letter-spacing-03;
+            background-color: $color-light;
+            border: 0;
+            border-radius: $border-r-4;
+            padding: $gap-6 $gap-22;
+            cursor: pointer;
+            transition: color 250ms $trans-func, background-color 250ms $trans-func;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $color-white;
+                background-color: $color-accent;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .portfolio {
+        &__filtr {
+            &__list {
+                justify-content: center;
+            }
+        }
+    }
+} 

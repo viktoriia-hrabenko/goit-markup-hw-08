@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: $color-accent #c2d2e4;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $color-accent;
+}
+
+html {
+    font-size: 100%;
+    line-height: 1.15;
+}
+
+body {
+    font-size: $font-size-16;
+    font-weight: $font-weight-standard;
+    font-family: $font-family-primary;
+    color: $color-primary;
+}
+
+.noScroll {
+    position: fixed;
+    overflow: hidden;
+}
+
+.wrapper {
+    max-width: 1200px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+ul,
+li,
+button {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: $color-primary;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-standard;
+}
+
+.title--h2 {
+    display: inline-block;
+    font-size: $font-size-36;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-42;
+    letter-spacing: $letter-spacing-03;
+    margin-bottom: $gap-50;
+}
+
+/* Helper classes */
+
+.padding {
+    &--y {
+        padding-top: $gap-60;
+        padding-bottom: $gap-60;
+    }
+
+    &--t {
+        padding-top: $gap-60;
+    }
+
+    &--b {
+        padding-bottom: $gap-60;
+    }
+}
+
+.margin {
+    &--y {
+        margin-top: $gap-60;
+        margin-bottom: $gap-60;
+    }
+
+    &--t {
+        margin-top: $gap-60;
+    }
+
+    &--b {
+        margin-bottom: $gap-60;
+    }
+}
+
+@media screen and (min-width: 480px) {}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1200px) {
+    .padding {
+        &--y {
+            padding-top: $gap-94;
+            padding-bottom: $gap-94;
+        }
+
+        &--t {
+            padding-top: $gap-94;
+        }
+
+        &--b {
+            padding-bottom: $gap-94;
+        }
+    }
+
+    .margin {
+        &--y {
+            margin-top: $gap-94;
+            margin-bottom: $gap-94;
+        }
+
+        &--t {
+            margin-top: $gap-94;
+        }
+
+        &--b {
+            margin-bottom: $gap-94;
+        }
+    }
+} 

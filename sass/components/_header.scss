@@ -1,0 +1,330 @@
+.header {
+  height: 80px;
+  border-bottom: 1px solid $color-very-light-gray;
+
+  &--flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $gap-93;
+    height: inherit;
+  }
+}
+
+.navigation--mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-white;
+  z-index: 99;
+  overflow: hidden;
+  transition: transform 250ms $trans-func;
+  padding-left: $gap-40;
+  padding-top: $gap-46;
+  padding-bottom: 48px;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+  gap: 70px;
+}
+
+.nav {
+  &__logo {
+    font-size: $font-size-26;
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-31;
+    letter-spacing: $letter-spacing-03;
+
+    &--accent {
+      color: $color-accent;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-36;
+  }
+
+  &__link {
+    position: relative;
+    font-size: $font-size-40;
+    font-weight: $font-weight-light;
+    font-family: $font-family-primary;
+    line-height: $line-height-47;
+    letter-spacing: $letter-spacing-02;
+    color: $color-primary;
+    transition: color 250ms $trans-func;
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
+
+    &--active {
+      color: $color-accent;
+    }
+  }
+
+  &__socials-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__socials-item {
+    font-size: $font-size-18;
+    font-weight: $font-weight-light;
+    line-height: $line-height-22;
+    letter-spacing: $letter-spacing-02;
+    color: $color-accent;
+    cursor: pointer;
+    margin-top: 6px;
+
+    &:not(:first-child) {
+      padding-left: 10px;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba($color-primary, 0.2);
+      padding-right: 10px;
+    }
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.contact {
+  display: flex;
+  // flex-wrap: wrap;
+  flex-direction: column;
+  gap: 32px;
+
+  &__link {
+    color: $color-secondary;
+    font-weight: $font-weight-light;
+    letter-spacing: $letter-spacing-02;
+
+    &--tel {
+      font-size: $font-size-34;
+      line-height: $line-height-40;
+    }
+
+    &--mail {
+      font-size: $font-size-24;
+      line-height: $line-height-28;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-accent;
+    }
+  }
+}
+
+.hide-for-mobile {
+  display: none;
+}
+
+.hide-for-desktop {
+  display: flex;
+}
+
+.open {
+  .hamburger-lines {
+    >span:first-child {
+      transform: rotate(45deg);
+    }
+
+    >span:nth-child(2) {
+      opacity: 0;
+    }
+
+    >span:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.hamburger-lines {
+  display: block;
+  height: 21px;
+  width: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999;
+
+  &:hover .line {
+    background: $color-accent;
+  }
+
+  .line {
+    display: block;
+    height: 3px;
+    width: 108%;
+    border-radius: 10px;
+    transform-origin: 3px 1px;
+    margin-bottom: 3px;
+    background: $color-primary;
+  }
+
+  .line1 {
+    transform-origin: 10% 213%;
+    transition: transform 250ms $trans-func, background 250ms $trans-func;
+  }
+
+  .line2 {
+    transition: transform 250ms $trans-func, background 250ms $trans-func;
+  }
+
+  .line3 {
+    transform-origin: 23% -33%;
+    transition: transform 250ms $trans-func, background 250ms $trans-func;
+  }
+}
+
+.hamburgerOpen {
+  position: fixed;
+  right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation--desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+    width: 100%;
+    position: initial;
+    width: 100%;
+  }
+
+  .nav {
+    &__logo {
+      font-size: $font-size-26;
+      font-family: $font-family-secondary;
+      font-weight: $font-weight-bold;
+      line-height: $line-height-31;
+      letter-spacing: $letter-spacing-03;
+
+      &--accent {
+        color: $color-accent;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: $gap-46;
+    }
+
+    &__link {
+      position: relative;
+      font-size: $font-size-14;
+      font-weight: $font-weight-light;
+      font-family: $font-family-primary;
+      line-height: $line-height-16;
+      letter-spacing: $letter-spacing-02;
+      color: $color-primary;
+      transition: color 250ms $trans-func;
+
+      &:hover,
+      &:focus {
+        color: $color-accent;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        bottom: -30px;
+        right: 0;
+        width: 0;
+        height: 5px;
+        background-color: $color-accent;
+        border-radius: $border-r-4;
+        transition: width 250ms $trans-func;
+      }
+
+      &:hover::after,
+      &:focus::after {
+        width: 100%;
+        left: 0;
+      }
+
+      &--active {
+        color: $color-accent;
+
+        &::after {
+          position: absolute;
+          content: '';
+          display: block;
+          bottom: -30px;
+          right: 0;
+          width: 100%;
+          height: 5px;
+          background-color: $color-accent;
+          border-radius: $border-r-4;
+        }
+      }
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+
+    &__link {
+      display: flex;
+      align-items: center;
+      color: $color-secondary;
+      fill: $color-secondary;
+      font-size: $font-size-14;
+      font-weight: $font-weight-light;
+      line-height: $line-height-16;
+      letter-spacing: $letter-spacing-02;
+      gap: $gap-10;
+      transition-property: color, fill;
+      transition-duration: 250ms;
+      transition-timing-function: $trans-func;
+
+      &:hover,
+      &:focus {
+        color: $color-accent;
+        fill: $color-accent;
+      }
+    }
+  }
+
+  .hide-for-mobile {
+    display: flex;
+  }
+
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 930px) {
+  .contact {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 50px;
+  }
+} 
