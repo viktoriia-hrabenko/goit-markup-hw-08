@@ -13,7 +13,6 @@
             max-width: 450px;
             height: 100%;
             background-color: $color-white;
-            border: 1px solid #eeeeee;
             transition: box-shadow 250ms $trans-func, background 250ms $trans-func;
             overflow: hidden;
 
@@ -43,6 +42,10 @@
                 height: 294px;
                 object-fit: cover;
             }
+        }
+
+        &__card {
+            border: 1px solid #eeeeee;
         }
 
         &__title {
