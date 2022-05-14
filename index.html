@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -18,11 +18,13 @@
     <link async rel="prefetch stylesheet" href="css/main.min.css" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- Title -->
+    <title>WebStudio</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="wrapper header--flex">
+        <div class="container header--flex">
             <a class="nav__logo" href="index.html"><span class="nav__logo--accent">Web</span>Studio</a>
             <a id="menuHamburger" href="javascript:void(0)" class="hamburger-lines hide-for-desktop">
                 <span class="line line1"></span>
@@ -105,13 +107,81 @@
                 <img class="hero__bg" src="./images/hero480.jpg" alt="" width="480" height="400" />
             </picture>
 
-            <div class="wrapper hero__content">
+            <div class="container hero__content">
                 <h1 class="hero__title">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
                 <button class="hero__btn" type="button" data-modal-open>Zamów usługe</button>
             </div>
         </section>
+
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <form action="" class="modal__form">
+                    <div class="modal__form__container">
+                        <h3 class="modal__form__title">Zostaw swoje dane w formularzu poniżej</h3>
+        
+                        <label class="modal__form__label" for="imie">Imie
+                            <div class="modal__form__label-wrapper">
+                                <input class="modal__form__input" type="text" required name="imie" id="imie" />
+                                <svg class="modal__form__svg" width="18" height="18">
+                                    <use href="images/sprite.svg#person-form" width="18" height="18"></use>
+                                </svg>
+                            </div>
+                        </label>
+        
+                        <label class="modal__form__label" for="tel">Telefon
+                            <div class="modal__form__label-wrapper">
+                                <input class="modal__form__input" type="tel" required name="tel" id="tel" />
+                                <svg class="modal__form__svg" width="18" height="18">
+                                    <use href="images/sprite.svg#phone-form" width="18" height="18"></use>
+                                </svg>
+                            </div>
+                        </label>
+        
+                        <label class="modal__form__label" for="mail">Email
+                            <div class="modal__form__label-wrapper">
+                                <input class="modal__form__input" type="email" required name="email" id="mail" />
+                                <svg class="modal__form__svg" width="18" height="18">
+                                    <use href="images/sprite.svg#email-form" width="18" height="18"></use>
+                                </svg>
+                            </div>
+                        </label>
+        
+                        <label class="modal__form__label" for="comment">Komentarz
+                            <textarea class="modal__form__textarea" name="comment" id="comment"
+                                placeholder="Wprowadź tekst"></textarea>
+                        </label>
+        
+                        <div class="modal__form__policy-wrapper">
+                            <label class="modal__form__policy-label" for="policy">
+                                <input class="modal__form__policy-input" type="checkbox" unchecked required name="policy"
+                                    id="policy" />
+                                <span class="modal__form__policy-checkmark">
+                                    <svg class="modal__form__policy-checkmark-svg" width="13" height="16">
+                                        <use href="images/sprite.svg#checkbox" width="13" height="16"></use>
+                                    </svg>
+                                </span>
+                                <div class="modal__form__policy-text">
+                                    <span>Oświadczam iż akceptuję</span>
+                                    <a class="modal__form__policy-link" href="#">Regulamin</a>
+                                    <span>i</span>
+                                    <a class="modal__form__policy-link" href="#">Politykę Prywatności.</a>
+                                </div>
+                            </label>
+                        </div>
+        
+                        <button class="modal__form__btn" type="submit">Wyślij</button>
+                    </div>
+                </form>
+                <button class="modal__btn-close" data-modal-close>
+                    <svg width="11" height="11">
+                        <use href="images/sprite.svg#close" width="11" height="11"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
         <section class="about padding--y">
-            <div class="wrapper">
+            <div class="container">
                 <ul class="about__list">
                     <li class="about__item">
                         <svg class="about__svg">
@@ -148,30 +218,30 @@
                 </ul>
             </div>
         </section>
-        <section class="what-we-do padding--y">
-            <div class="wrapper">
+        <section class="features padding--y">
+            <div class="container">
                 <h2 class="title--h2">Czym sie zajmujemy</h2>
-                <ul class="what-we-do__list">
-                    <li class="what-we-do__item">
-                        <img class="what-we-do__img" src="images/white_keyboard.jpg" alt="White-keyboard" width="370"
+                <ul class="features__list">
+                    <li class="features__item">
+                        <img class="features__img" src="images/white_keyboard.jpg" alt="White-keyboard" width="370"
                             height="294" />
-                        <span class="what-we-do__description">Aplikacje komputerowe</span>
+                        <span class="features__description">Aplikacje komputerowe</span>
                     </li>
-                    <li class="what-we-do__item">
-                        <img class="what-we-do__img" src="images/iphone_laptop.jpg" alt="Iphone_laptop" width="370"
+                    <li class="features__item">
+                        <img class="features__img" src="images/iphone_laptop.jpg" alt="Iphone_laptop" width="370"
                             height="294" />
-                        <span class="what-we-do__description">Aplikacje mobilne</span>
+                        <span class="features__description">Aplikacje mobilne</span>
                     </li>
-                    <li class="what-we-do__item">
-                        <img class="what-we-do__img" src="images/hex_tablet.jpg" alt="hex_tablet" width="370"
+                    <li class="features__item">
+                        <img class="features__img" src="images/hex_tablet.jpg" alt="hex_tablet" width="370"
                             height="294" />
-                        <span class="what-we-do__description">Rozwiązania graficzne</span>
+                        <span class="features__description">Rozwiązania graficzne</span>
                     </li>
                 </ul>
             </div>
         </section>
         <section class="team padding--y">
-            <div class="wrapper">
+            <div class="container">
                 <h2 class="title--h2">Nasz zespół</h2>
                 <ul class="team__list">
                     <li class="team__item">
@@ -352,7 +422,7 @@
             </div>
         </section>
         <section class="clients padding--y">
-            <div class="wrapper">
+            <div class="container">
                 <h2 class="title--h2">Nasi klienci</h2>
                 <ul class="clients__list">
                     <li class="clients__item">
@@ -400,75 +470,10 @@
                 </ul>
             </div>
         </section>
-        <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
-                <form action="" class="modal__form">
-                    <div class="modal__form__container">
-                        <h3 class="modal__form__title">Zostaw swoje dane w formularzu poniżej</h3>
-
-                        <label class="modal__form__label" for="imie">Imie
-                            <div class="modal__form__label-wrapper">
-                                <input class="modal__form__input" type="text" required name="imie" id="imie" />
-                                <svg class="modal__form__svg" width="18" height="18">
-                                    <use href="images/sprite.svg#person-form" width="18" height="18"></use>
-                                </svg>
-                            </div>
-                        </label>
-
-                        <label class="modal__form__label" for="tel">Telefon
-                            <div class="modal__form__label-wrapper">
-                                <input class="modal__form__input" type="tel" required name="tel" id="tel" />
-                                <svg class="modal__form__svg" width="18" height="18">
-                                    <use href="images/sprite.svg#phone-form" width="18" height="18"></use>
-                                </svg>
-                            </div>
-                        </label>
-
-                        <label class="modal__form__label" for="mail">Email
-                            <div class="modal__form__label-wrapper">
-                                <input class="modal__form__input" type="email" required name="email" id="mail" />
-                                <svg class="modal__form__svg" width="18" height="18">
-                                    <use href="images/sprite.svg#email-form" width="18" height="18"></use>
-                                </svg>
-                            </div>
-                        </label>
-
-                        <label class="modal__form__label" for="comment">Komentarz
-                            <textarea class="modal__form__textarea" name="comment" id="comment"
-                                placeholder="Wprowadź tekst"></textarea>
-                        </label>
-
-                        <div class="modal__form__policy-wrapper">
-                            <label class="modal__form__policy-label" for="policy">
-                                <input class="modal__form__policy-input" type="checkbox" unchecked required
-                                    name="policy" id="policy" />
-                                <span class="modal__form__policy-checkmark">
-                                    <svg class="modal__form__policy-checkmark-svg" width="13" height="16">
-                                        <use href="images/sprite.svg#checkbox" width="13" height="16"></use>
-                                    </svg>
-                                </span>
-                                <div class="modal__form__policy-text">
-                                    <span>Oświadczam iż akceptuję</span>
-                                    <a class="modal__form__policy-link" href="#">Regulamin</a>
-                                    <span>i</span>
-                                    <a class="modal__form__policy-link" href="#">Politykę Prywatności.</a>
-                                </div>
-                            </label>
-                        </div>
-
-                        <button class="modal__form__btn" type="submit">Wyślij</button>
-                    </div>
-                </form>
-                <button class="modal__btn-close" data-modal-close>
-                    <svg width="11" height="11">
-                        <use href="images/sprite.svg#close" width="11" height="11"></use>
-                    </svg>
-                </button>
-            </div>
-        </div>
+        
     </main>
     <footer class="footer">
-        <div class="wrapper footer__content">
+        <div class="container footer__content">
             <ul class="footer__list">
                 <li class="footer__item">
                     <a class="footer__logo" href="index.html"><span class="footer__logo--accent">Web</span>Studio</a>

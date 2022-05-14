@@ -15,15 +15,10 @@
   background-color: #2196f3;
 }
 
-html {
-  font-size: 100%;
-  line-height: 1.15;
-}
-
 body {
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
   color: #212121;
 }
 
@@ -32,7 +27,7 @@ body {
   overflow: hidden;
 }
 
-.wrapper {
+.container {
   max-width: 1200px;
   height: auto;
   margin-right: auto;
@@ -969,27 +964,27 @@ button {
   }
 }
 
-.what-we-do {
+.features {
   display: none;
   text-align: center;
 }
 
-.what-we-do__list {
+.features__list {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
 }
 
-.what-we-do__item {
+.features__item {
   position: relative;
 }
 
-.what-we-do__img {
+.features__img {
   display: block;
 }
 
-.what-we-do__description {
+.features__description {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1007,7 +1002,7 @@ button {
 }
 
 @media screen and (min-width: 1200px) {
-  .what-we-do {
+  .features {
     display: block;
   }
 }

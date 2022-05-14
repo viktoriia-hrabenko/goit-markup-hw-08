@@ -15,15 +15,10 @@
     background-color: $color-accent;
 }
 
-html {
-    font-size: 100%;
-    line-height: 1.15;
-}
-
 body {
+    font-family: $font-family-primary;
     font-size: $font-size-16;
     font-weight: $font-weight-standard;
-    font-family: $font-family-primary;
     color: $color-primary;
 }
 
@@ -32,7 +27,7 @@ body {
     overflow: hidden;
 }
 
-.wrapper {
+.container {
     max-width: 1200px;
     height: auto;
     margin-right: auto;
